@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>网站首页</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/cooperation.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+	.follow img,.rank img,.rich img,.fans img{
+		border-radius:50%;
+	}
+	.follow p,.rank p,.rich p,.fans p{
+		color:#333;
+	}
+	.follow p:hover,.rank p:hover,.rich p:hover,.fans p:hover{
+		color:#999;
+	}
+	/*@media (min-width: 992px){
+		.carousel-inner{
+			height:370px;
+		}
+		
+		.follow .foLi{
+			margin-bottom:10px; 
+		}
+		
+		.hotLi a img{
+			border:4px solid #912adc;
+			box-shadow:
+			6px  0 #ad62e4,
+			0    6px #ad62e4,
+			-6px 0 #ad62e4,
+			0    -6px #ad62e4;
+			
+			
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;	
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+		}
+		.hotLi.fir img{
+			width:232px;
+		}
+		.hotLi a img:hover {
+			border:4px solid #912adc;
+			box-shadow:
+			5px  0 #ad62e4,
+			0    5px #ad62e4,
+			-5px 0 #ad62e4,
+			0    -5px #ad62e4,
+			
+			10px  0 rgba(0,0,0,.1),
+			0    10px rgba(0,0,0,.1),
+			-10px 0 rgba(0,0,0,.1),
+			0    -10px rgba(0,0,0,.1);
+			
+			
+			
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;	
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+			
+		}
+		.hotLi .thumbnail{
+			border:none;
+		}
+    
+	}*/
+	
+	
+	
+	
+	
+	/*底部*/
+	.bs-docs-footer {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-top: 100px;
+		color: #767676;
+		text-align: center;
+		border-top: 1px solid #e5e5e5;
+	}
+    
+    </style>
+  </head>
+  <body style="padding-top:60px;">  <!--为了防止导航栏与页面主体中的其他内容的顶部相交错，请向 <body> 标签添加至少 50 像素的内边距（padding）-->
+	<!--导航-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">蝌蚪直播</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#about">广场</a></li>
+            <li><a href="#contact">排行榜</a></li>
+            <li>
+              <form class="navbar-form navbar-left" role="search">
+                 <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                 </div>
+                 <button type="submit" class="btn btn-default">提交</button>
+              </form> 
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">登录</a></li>
+            <li class="active"><a href="./">注册<span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    
+    <!--主体-->
+    <div class="container">
+    	<div class="row">
+        	<div class="col-md-9 col-sm-9 col-xs-12" role="main">
+            	<div id="carousel-example-captions" class="carousel slide" data-ride="carousel" style="margin-bottom:30px;">
+					<ol class="carousel-indicators">
+                    <li data-target="#carousel-example-captions" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example-captions" data-slide-to="2" class="active"></li>
+                  </ol>
+					<div class="carousel-inner" role="listbox">
+                        <div class="item">
+              <img data-src="holder.js/900x500/auto/#777:#777" alt="900x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNzc3OiM3NzcKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTNmMTQ4YTQ4MSB0ZXh0IHsgZmlsbDojNzc3O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjQ1cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1M2YxNDhhNDgxIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjxnPjx0ZXh0IHg9IjMzMy4yMTA5Mzc1IiB5PSIyNzAuMSI+OTAweDUwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+              <div class="carousel-caption">
+                <h3>First slide label</h3>
+                <!--<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+              </div>
+            </div>
+                        <div class="item">
+              <img data-src="holder.js/900x500/auto/#666:#666" alt="900x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNjY2OiM2NjYKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTNmMTQ4NWY5ZSB0ZXh0IHsgZmlsbDojNjY2O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjQ1cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1M2YxNDg1ZjllIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiIvPjxnPjx0ZXh0IHg9IjMzMy4yMTA5Mzc1IiB5PSIyNzAuMSI+OTAweDUwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+              <div class="carousel-caption">
+                <!--<h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+              </div>
+            </div>
+                        <div class="item active">
+              <img data-src="holder.js/900x500/auto/#555:#555" alt="900x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNTU1OiM1NTUKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTNmMTQ4ODI5ZSB0ZXh0IHsgZmlsbDojNTU1O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjQ1cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1M2YxNDg4MjllIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSIvPjxnPjx0ZXh0IHg9IjMzMy4yMTA5Mzc1IiB5PSIyNzAuMSI+OTAweDUwMDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+              <div class="carousel-caption">
+                <!--<h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+              </div>
+            </div>
+                    </div>
+					<a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+					<a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+    			</div>
+    			
+                <!--热门主播-->
+    			<div>
+                	<div class="page-header">
+                	<h4><span class="glyphicon glyphicon-flag"></span>热门主播
+                    	<a href="javascript:;"><small>智能</small></a>
+                        <a href="javascript:;"><small>推荐</small></a>
+                    </h4>
+                </div>
+                <div class="row">
+                  <div class="hotLi fir col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="hotLi col-md-2 col-sm-3 col-xs-3">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  
+                  
+                </div>
+    			
+                <div class="row">
+                	<div class="col-md-12 col-sm-12 col-xs-12">
+                        <a href="javascript:;" class="thumbnail">
+                            <img src="images/movie.jpg"/>
+                        </a>
+                    </div>
+                </div>
+                
+                <!--最新入驻-->
+                <!--<div class="page-header">
+                	<h4><span class="glyphicon glyphicon-heart"></span>最新入驻
+                    	<a href="javascript:;"><small>智能</small></a>
+                        <a href="javascript:;"><small>推荐</small></a>
+                    </h4>
+                    
+                </div>
+                <div class="row">
+                	<div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  	<div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  	<div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  	<div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  	<div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                 	<div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                  <div class="col-md-2 col-sm-3 col-xs-4">
+                    <a href="#" class="thumbnail">
+                      <img src="images/bd89bda0c53156d09a82abf412c87ea5.jpg" alt="...">
+                    </a>
+                  </div>
+                </div>-->
+                
+                
+                <!--官方合作-->
+                <h4>官方合作</h4>
+                
+                
+                <div class="row">
+                      <div class="col-md-2 col-sm-3 col-xs-4">
+                        <a href="#" class="thumbnail">
+                          <img src="images/luxing.png" alt=""/>
+                        </a>
+                      </div>
+                      <div class="col-md-2  col-sm-3 col-xs-4">
+                        <a href="#" class="thumbnail">
+                          <img src="images/god.png" alt=""/>
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-4">
+                        <a href="#" class="thumbnail">
+                          <img src="images/tudou.png" alt=""/>
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-4">
+                        <a href="#" class="thumbnail">
+                          <img src="images/legend.png" alt=""/>
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-4">
+                        <a href="#" class="thumbnail">
+                          <img src="images/youku.png" alt=""/>
+                        </a>
+                      </div>
+                      <div class="col-md-2 col-sm-3 col-xs-4">
+                        <a href="#" class="thumbnail">
+                          <img src="images/origin.png" alt=""/>
+                        </a>
+                      </div>
+                    </div>
+                  
+                  
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 hidden-xs" role="complementary">
+				<!--登录注册-->
+                <div class="thumbnail text-center">
+                	<div class="caption">
+                        <p class="row">
+                            <button type="button" id="btn_login" class="btn_login btn btn-warning" data-loading-text="Loading..." autocomplete="off" onclick="login()">立即登录</button>
+                        </p>
+                        <p class="row">
+                            <button type="button" class="btn_login btn btn-default" data-loading-text="Loading..." autocomplete="off">一键登录</button>
+                        </p>
+                        <p class="">忘记密码 请点击 <b><a href="javascript:;">这里找回</a></b></p>
+                        <hr/>
+                        <p>快捷登录</p>
+                        <p class="row">
+                            <button type="button" class="btn_login btn btn-info" data-loading-text="Loading..." autocomplete="off">QQ账号登录</button>
+                        </p>
+                        <p class="row">
+                            <button type="button" class="btn_login btn btn-success" data-loading-text="Loading..." autocomplete="off">微信账号登录</button>
+                        </p>
+                            
+                     </div>
+                </div>               	
+
+            	
+                <!--我的关注-->
+               <div class="thumbnail follow text-left">
+               	<div class="caption">
+                        <div class="row foLi">
+                        	<h4 class="col-md-6 col-sm-6">我的关注</h4>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                       
+                     </div>
+               </div>
+                
+                <!--申请入驻-->
+                <a href="javascript:;" class="thumbnail">
+                    <img src="images/download.jpg"/>
+                </a>
+                
+                <!--主播排行榜-->
+               <div class="thumbnail text-left rank">
+               	<div class="caption">
+                        <div class="row foLi">
+                        	<h4 class="col-md-6">主播排行榜</h4>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                       
+                     </div>
+
+               </div>
+                
+                <!--土豪榜-->
+                <div class="thumbnail rich text-left">
+                         <div class="caption">
+                         	<div class="row foLi">
+                            	<div class="col-md-5 col-sm-7 cl-xs-12">
+                                	<h4>土豪榜</h4>
+                                </div>
+                            </div>
+                            <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        	<div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        	<div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        	<div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                            
+                           
+                         </div>
+
+                   </div>
+                
+                <!--粉丝活跃榜-->
+                <div class="fans thumbnail text-left">
+                         <div class="caption">
+                         	<div class="row foLi">
+                            	<div class="col-md-5 col-sm-5 cl-xs-5">
+                                	<h4>粉丝榜</h4>
+                                </div>
+                            </div>
+                            <div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        	<div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                       	 	<div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                        	<div class="row foLi">
+                        	<a href="javascript:;">
+                                <div class="col-md-4 col-sm-4">
+                                    <img src="images/photo_title.jpg"/>
+                                </div>
+                                <div class="col-md-2 col-sm-2"></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>小蜜桃sasa</p>
+                                    <p>未开播</p>
+                                </div>
+                            </a>
+                        </div>
+                            
+                            
+                           
+                         </div>
+
+                   </div>
+                
+        	</div>
+        </div>
+    
+    </div>
+    
+    <!--底部-->
+	<footer class="bs-docs-footer navbar-inverse" role="contentinfo">
+		<div class="container">
+			<p>
+            	<a href="javascript:;">服务协议 </a>|
+                <a href="javascript:;">客服帮助</a>
+                
+            </p>
+            <p>
+            	<img src="images/logo_footer.png">
+                <span>Copyright©2016 沪ICP备14054721号-4</span>
+            </p>
+            <p>蝌蚪客服电话：021-63156389 | 商务合作邮箱：
+            	<a class="officialMailbox" href="mailto:mt@mutiantech.com">kd@kedo.tv</a>
+            </p>
+		</div>
+	</footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+   
+    
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/boot.js"></script>
+  </body>
+</html>

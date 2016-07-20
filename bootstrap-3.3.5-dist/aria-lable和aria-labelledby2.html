@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  <!--但是如果我们没有给输入框设置label时，当其获得焦点时，屏幕阅读器会读出aria-label属性的值，aria-label不会在视觉上呈现效果-->
+  	<form role = "form"> 
+      <div class="form-group col-lg-3 form-horizontal"> 
+       <div class="col-lg-7"> 
+        <input type = "text" id = "idCard" class="form-control" aria-label = "身份证号"> 
+       </div>   
+      </div>  
+     </form> 
+     <!--目前读屏软件都不支持在span上使用aria-label
+     使用aria-label时需注意，
+
+    (1) 同时使用aria-label和label for时，忽略后者。
+    
+    (2) 同时使用aria-label和aria-labelledy时，忽略前者
+    
+    (3) IE不支持对input使用aria-label，但是支持aria-labelledby。
+    
+    (4) 使用aria-labelledby时，即使对应的注释文本被隐藏，依然能读出来。
+    用label for注释时隐藏的label也可以读出来，不过兼容性稍差，在FF4.0.1中NVDA不能读。
+
+    (5) 实际运用注释时通常在title和aira之间徘徊，因为两者的功能类似，读屏软件都能读出来，但是title会浮出一个提示层，aria不会，不过title的兼容性比较好，它是标准属性
+    
+           所以在具体应用中需要有所取舍，我认为，在不影响用户体验的情况下，尽量用title。一些不能用的地方，例如列表中的li，就选择用aria-label，aria主要还是在用于解释交互行为方面比较强大。
+    
+    
+    
+    -->
+    
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+    
+    

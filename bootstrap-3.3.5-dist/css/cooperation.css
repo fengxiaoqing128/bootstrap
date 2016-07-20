@@ -1,0 +1,9 @@
+.sprite_coop {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../images/cooperation.png);}
+
+.god {width:96px; height:68px; background-position: -2px -422px}
+.legend {width:96px; height:68px; background-position: -2px -352px}
+.luxing {width:96px; height:68px; background-position: -2px -282px}
+.origin {width:96px; height:68px; background-position: -2px -212px}
+.tudou {width:96px; height:68px; background-position: -2px -142px}
+.youku {width:96px; height:68px; background-position: -2px -72px}
+.zui {width:96px; height:68px; background-position: -2px -2px}

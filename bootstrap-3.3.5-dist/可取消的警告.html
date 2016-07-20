@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 实例 - 响应式的导航栏</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    body{height:2000px; }
+    
+    </style>
+  </head>
+  <body>
+  <!--创建一个可取消的警告（Dismissal Alert）步骤如下：
+通过创建一个 <div>，并向其添加一个 .alert class 和四个上下文 class（即 .alert-success、.alert-info、.alert-warning、.alert-danger）之一，来添加一个基本的警告框。
+同时向上面的 <div> class 添加可选的 .alert-dismissable。
+添加一个关闭按钮。-->
+<!--请确保使用带有 data-dismiss="alert" data 属性的 <button> 元素-->
+  
+  
+  	<div class="alert alert-success alert-dismissable">
+       <button type="button" class="close" data-dismiss="alert" 
+          aria-hidden="true">
+          &times;
+       </button>
+       成功！很好地完成了提交。
+    </div>
+    <div class="alert alert-info alert-dismissable">
+       <button type="button" class="close" data-dismiss="alert" 
+          aria-hidden="true">
+          &times;
+       </button>
+       信息！请注意这个信息。
+    </div>
+    <div class="alert alert-warning alert-dismissable">
+       <button type="button" class="close" data-dismiss="alert" 
+          aria-hidden="true">
+          &times;
+       </button>
+       警告！请不要提交。
+    </div>
+    <div class="alert alert-danger alert-dismissable">
+       <button type="button" class="close" data-dismiss="alert" 
+          aria-hidden="true">
+          &times;
+       </button>
+       错误！请进行一些更改。
+    </div>
+
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

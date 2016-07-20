@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  <!--当想要的标签文本已在其他元素中存在时，可以使用aria-labelledby，并将其值为所有读取的元素的id。如下：
+当ul获取到焦点时，屏幕阅读器是会读：“选择您的职位”-->
+  <!--如果一个元素同时有aria-labelledby和aria-label，读屏软件会优先读出aria-labelledby的内容-->
+  	<div class="dropdown"> 
+      <button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+       data-toggle="dropdown"> 
+       选择您的职位 
+       <span class="caret"></span> 
+      </button> 
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"> 
+       <li role="presentation"> 
+        <a role="menuitem" tabindex="-1" href="#">测试工程师</a> 
+       </li> 
+       <li role="presentation"> 
+        <a role="menuitem" tabindex="-1" href="#">开发工程师</a> 
+       </li> 
+       <li role="presentation"> 
+        <a role="menuitem" tabindex="-1" href="#">销售工程师</a> 
+       </li>   
+      </ul> 
+     </div> 
+    
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+    
+    

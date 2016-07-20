@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 实例 - 响应式的导航栏</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    body{height:2000px; }
+    
+    </style>
+  </head>
+  <body>
+	<nav class="navbar navbar-default" role="navigation">
+       <div class="navbar-header">
+          <a class="navbar-brand" href="#">W3Cschool</a>
+       </div>
+       <div>
+   
+    <!--class .navbar-left 或 .navbar-right 向左或向右对齐导航栏中的 导航链接、表单、按钮或文本 这些组件。这两个 class 都会在指定的方向上添加 CSS 浮动-->
+      <!--向左对齐-->
+      <ul class="nav navbar-nav navbar-left">
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Java 
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li class="divider"></li>
+               <li><a href="#">分离的链接</a></li>
+               <li class="divider"></li>
+               <li><a href="#">另一个分离的链接</a></li>
+            </ul>
+         </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+         <button type="submit" class="btn btn-default">
+            向左对齐-提交按钮  
+         </button>
+      </form> 
+      <p class="navbar-text navbar-left">向左对齐-文本</p>
+      <!--向右对齐-->
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Java <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li class="divider"></li>
+               <li><a href="#">分离的链接</a></li>
+               <li class="divider"></li>
+               <li><a href="#">另一个分离的链接</a></li>
+            </ul>
+         </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+         <button type="submit" class="btn btn-default">
+            向右对齐-提交按钮
+         </button>
+      </form> 
+      <p class="navbar-text navbar-right">向右对齐-文本</p>
+   </div>
+</nav>
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+   
+    
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

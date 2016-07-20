@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+/*左侧菜单*/
+.sidebar-menu{
+    border-right: 1px solid #c4c8cb;
+}
+/*一级菜单*/
+.menu-first{
+    height:45px;
+    line-height:45px;
+    background-color: #e9e9e9;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+/*一级菜单鼠标划过状态*/
+.menu-first:hover{
+    text-decoration: none;
+    background-color: #d6d4d5;
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #acacac;
+}
+/*二级菜单*/
+.menu-second li a{
+    background-color: #f6f6f6;
+    height:31px;
+    line-height:31px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+    text-align:center;
+}
+/*二级菜单鼠标划过样式*/
+.menu-second li a:hover {
+    text-decoration: none;
+    background-color: #66c3ec;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+}
+/*二级菜单选中状态*/
+.menu-second-selected {
+    background-color: #66c3ec;
+    height:31px;
+    line-height:31px;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+    text-align:center;
+}
+/*覆盖bootstrap的样式*/
+.nav-list,.nav-list li a{
+    padding: 0px;
+    margin: 0px;
+}
+    
+    
+    
+    </style>
+  </head>
+  <body>
+  	<div class="tabbable">
+    	<div class="sidebar-menue">
+            <div class="nav nav-tabs tt">
+            	<a href="#userMeun" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-user-md icon-large"></i> 用户管理</a>
+            	<ul id="userMeun" class="nav nav-tabs nav-list collapse menu-second">
+                    <li><a href="#tab1" data-toggle="tab"><i class="icon-user"></i> 增加用户</a></li>
+                    <li><a href="#tab2" data-toggle="tab"><i class="icon-edit"></i> 修改用户</a></li>
+                    <li><a href="#tab3" data-toggle="tab"><i class="icon-trash"></i> 删除用户</a></li>
+                </ul>
+            </div>
+            <div class="nav nav-tabs tt">
+                <a href="#articleMenu" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-book icon-large"></i> 文章管理</a>
+            	<ul id="articleMenu" class="nav nav-tabs nav-list collapse menu-second">
+                    <li><a href="#"><i class="icon-pencil"></i> 添加文章</a></li>
+                    <li><a href="#"><i class="icon-list-alt"></i> 文章列表</a></li>
+                </ul>
+             </div>
+
+            
+        </div>
+    
+    	<div id="myTabContent" class="tab-content">
+           <div class="tab-pane fade active" id="tab1">
+              <p>Tutorials Point is a place for beginners in all technical areas. 
+                 This website covers most of the latest technoligies and explains 
+                 each of the technology with simple examples. You also have a 
+                 <b>tryit</b> editor, wherein you can edit your code and 
+                 try out different possibilities of the examples.</p>
+           </div>
+           <div class="tab-pane fade" id="tab2">
+              <p>iOS is a mobile operating system developed and distributed by Apple 
+                 Inc. Originally released in 2007 for the iPhone, iPod Touch, and 
+                 Apple TV. iOS is derived from OS X, with which it shares the 
+                 Darwin foundation. iOS is Apple's mobile version of the 
+                 OS X operating system used on Apple computers.</p>
+           </div>
+           <div class="tab-pane fade" id="tab3">
+              <p>jMeter is an Open Source testing software. It is 100% pure 
+              Java application for load and performance testing.</p>
+           </div>
+          
+        </div>
+        <div class="tab-content aa">
+        	<div class="tab-pane fade vv" id="a">aa</div>
+            <div class="tab-pane fade vv" id="b">bb</div>
+        </div>
+    </div>
+
+
+  	
+    
+    
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+	
+    $(".tabbable").find(".tt >a").click(function(){
+		$(".tt").removeClass("active");
+		$(this).addClass("active");
+		
+		$(".tabbable").find(".vv").removeClass("active in").eq($(this).index()).addClass("active in");
+	
+	});
+	
+	/*$(".sidebar-menue .tt ul").click(function(){
+		$(".aa").find(".vv").removeClass("active in");
+	});*/
+
+
+    </script>
+  </body>
+</html>

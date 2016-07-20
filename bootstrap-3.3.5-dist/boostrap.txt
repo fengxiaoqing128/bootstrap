@@ -1,0 +1,306 @@
+Bootstrap是HTML、CSS、和JS框架，用于开发响应式布局、移动设备优先的WEB项目
+中文网站：v3.bootcss.com	v3.3.0
+
+Bootstrap引入三样：一个css，两个js
+
+Bootstrap全局样式表：
+排版与链接：
+@font-family-base、@font-size-base 和 @line-height-base a变量作为排版的基本参数
+@link-color链接颜色
+这些样式都能在 scaffolding.less 文件中找到对应的源码。
+
+
+btn btn-default
+btn btn-primary
+btn btn-info
+btn btn-success
+btn btn-warning
+btn btn-link
+
+尺寸
+btn-lg大 btn-sm中 btn-xs小
+
+状态：
+激活状态:active
+禁用状态:disabled
+yun.itxdl.cn
+
+按钮类：
+可作为按钮使用的标签或元素
+为 <a>、<button> 或 <input> 元素添加按钮类（button class）即可使用 Bootstrap 提供的样式。
+即a、button双标签和input单标签都可以渲染成按钮的
+
+针对组件的注意事项
+虽然按钮类可以应用到 <a> 和 <button> 元素上，但是，导航和导航条组件只支持 <button> 元素。
+
+当span的类是caret时，就代表小三角
+
+下拉菜单：
+	标题：在任何下拉菜单中均可通过添加标题来表明一组动作
+	分割线：为下拉菜单添加一条分割线，用于将多个链接分组
+	禁用的菜单项：为下拉菜单中的<li>元素添加.disabled类，从而禁用相应的菜单项
+
+
+按钮组：通过按钮组容器把一组按钮放在同一行里。通过与按钮插件联合使用，可设置为单选框或多选框的样式和行为
+	按钮工具栏：把一组<div class="btn-ground"></div>组合进一个<div class="btn-toolbar">中就可以做成更复杂的组件
+	尺寸：只要给 .btn-group 加上 .btn-group-* 类，就省去为按钮组中的每个按钮都赋予尺寸类了，如果包含了多个按钮组时也适用。
+
+垂直排列：让一组按钮垂直堆叠排列显示而不是水平排列。分列式按钮下拉菜单不支持这种方式！！
+
+
+按钮式下拉菜单：
+	单按钮下拉菜单：只要改变一些基本的标记，就能把按钮变成下拉菜单的开关。
+	分裂式按钮下拉菜单：相似地，分裂式按钮下拉菜单也需要同样的改变一些标记，但只是多一个分开的按钮。
+
+	尺寸：按钮式下拉菜单适用所有尺寸的按钮  类中加上btn-lg/sm/xs
+
+	向上弹出式菜单：给父元素添加 .dropup 类就能使触发的下拉菜单朝上方打开。
+	
+
+输入框组：通过在文本输入框 <input> 前面、后面或是两边加上文字或按钮，可以实现对表单控件的扩展。为 .input-group 赋予 .input-group-addon 类，可以给 .form-control 的前面或后面添加额外的元素。
+
+	作为额外元素的多选框和单选框
+
+表单：当前页面就一个form表单，就不用写name了
+	input里要写name,因为要是没有名称，后台讲接收不到数据
+	名称提示：<label></lable>
+
+	get在浏览器的地址栏可以看到提交的数据，有长度限制，post就不会显示出来
+	使用post的三种情况(因为它更安全，传输的数据更多):①密文
+	     ②敏感性文字或
+	     ③数据量较大
+
+	内联表单：为 <form> 元素添加 .form-inline 类可使其内容左对齐并且表现为 inline-block 级别的控件。只适用于视口（viewport）至少在 768px 宽度时（视口宽度再小的话就会使表单折叠）。
+
+	水平排列的表单：通过为表单添加 .form-horizontal 类，并联合使用 Bootstrap 预置的栅格类，可以将 label 标签和控件组水平并排布局。这样做将改变 .form-group 的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加 .row 了。
+
+	***input尽量不要与栅格类并列使用，要嵌套使用
+	栅格类：12个格   col-sm-2占两个格，那么剩余就占10个格
+
+	栅格系统行为：详见栅格系统.png
+
+小结：下拉菜单：div父级加dropdown的类
+		button标签加dropdown-toggle的类，同时也要加上data-toggle="dropdown"，utton的innerHTML里写上默认值，eg:请选择。button标签里套个span加上caret的类，用来装三角符号
+		ul加上.dropdown-menu的类
+		下拉选项标题：加上dropdown-header的类
+		分割线：加上divider的类
+		禁用：加上disabled的类
+
+	按钮组：div父级加上btn-group的类
+		buttom子集都加上一般的类
+
+		按钮组垂直排列：父级div加上btn-group-vertical的类
+		按钮组下拉向上：父级div加上btn-group的类
+		按钮组水平排列：父级div加btn-group-justified的类
+
+		按钮组工具栏：父级div加btn-toolbar的类
+		      	     子集div就是btn-group的类
+
+		分裂式按钮下拉菜单：父级加btn-group的类
+				   第一个子集button的innerHTML里写上默认值，eg:请选择
+				   第二个子集button同下拉菜单的button写法，加上dropdown-toggle的类，同时加上data-toggle="dropdown"
+					第二个子集button里加两个span，第一个仍同上，第二个加上sr-only的类  意义就在于能保证屏幕阅读器正确读取且不会影响 UI 的视觉呈现
+				   第三个子集ul同下拉菜单写法
+
+
+		***下拉列表朝上：父级div另加上dropup的类
+
+
+		表单：父级form
+		      每条信息都用div包着，该div加上form-group的类
+		      div下面要有lable和input,给input加上form-control的类
+
+		     内联表单/行内表单：特点是排列在一行内，给父级form加上form-inline的类
+
+		水平排列的表单：给父级form加上form-horizontal的类(涉及到栅格类)
+				   
+
+
+表单：
+	被支持的控件
+		输入框：包括大部分表单控件、文本输入域控件，还支持所有 HTML5 类型的输入控件： text、password、datetime、datetime-local、date、month、time、week、number、email、url、search、tel 和 color。
+
+		***h5中，只要所填格式与type不同，就会有提示
+
+
+
+			必须添加类型声明：只有正确设置了 type 属性的输入控件才能被赋予正确的样式。
+
+
+	input里加了form-control的类，使输入框出现了圆角的特征
+
+所有标签有四大属性：name id class style
+
+	静态控件：如果需要在表单中将一行纯文本和 label 元素放置于同一行，为 <p> 元素添加 .form-control-static 类即可。(lable标签里加control-sm-2的类)
+
+	禁用状态：disabled(h5知识)
+	只读状态：readonly(h5知识)
+	校验状态：Bootstrap 对表单控件的校验状态，如 error、warning 和 success 状态，都定义了样式。使用时，添加 .has-warning、.has-error 或 .has-success 类到这些控件的父元素即可。任何包含在此元素之内的 .control-label、.form-control 和 .help-block 元素都将接受这些校验状态的样式。
+
+	控件尺寸：通过 .input-lg 类似的类可以为控件设置高度，通过 .col-lg-* 类似的类可以为控件设置宽度。
+
+
+
+
+
+
+	图片：(响应式图片)在 Bootstrap 版本 3 中，通过为图片添加 .img-responsive 类可以让图片支持响应式布局。
+
+		在 Internet Explorer 8-10 中，设置为 .img-responsive 的 SVG 图像显示出的尺寸不匀称。为了解决这个问题，在出问题的地方添加 width: 100% \9; 即可。Bootstrap 并没有自动为所有图像元素设置这一属性，因为这会导致其他图像格式出现错乱。
+
+
+辅助类：情境文本颜色
+	通过颜色来展示意图，Bootstrap 提供了一组工具类。这些类可以应用于链接，并且在鼠标经	过时颜色可以还可以加深，就像默认的链接一样。
+
+	关闭按钮：给按钮加close的类
+	快速浮动：给元素加pull-left->左浮动；pull-right->右浮动
+		***不能用于导航条组件中
+		排列导航条中的组件时可以使用这些工具类：.navbar-left 或 .navbar-right 。
+	清除浮动：给一个元素加上clearfix的类
+	显示或隐藏内容：.show 和 .hidden 类可以强制任意元素显示或隐藏(对于屏幕阅读器也能起效) 注意，这些类只对块级元素起作用，另外，还可以作为 mixin 使用。
+	图片替换：使用 .text-hide 类或对应的 mixin 可以用来将元素的文本内容替换为一张背景图。.text-hide类似于alt
+
+有关颜色的：btn-danger input-danger text-danger bg-danger
+
+
+
+
+	栅格系统：Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。
+	    工作原理：行必须包含在.container(固定宽度)或.container-fluid(100%宽度)中，以便为其赋予合适的排列(aligment)和內补(padding)
+			
+			通过行在水平方向创建列
+
+		列排序：通过使用.col-md-push-*和.col-md-pull-*类就可很容易的改变列(column)的顺序；要有两个及以上才可用这样的类，否则会无效
+
+
+导航：Bootstrap 中的导航组件都依赖同一个 .nav 类，状态类也是共用的。改变修饰类可以改变样式
+	别忘了li要设置角色，不然显示不出来，role="presentation"
+
+
+
+导航条：两端对齐的导航条导航链接已经被弃用了。依赖 JavaScript 插件
+如果 JavaScript 被禁用，并且视口（viewport）足够窄，致使导航条折叠起来，导航条将不能被打开，.navbar-collapse 内所包含的内容也将不可见。
+
+	品牌图标：brand image
+	非导航链接：使用 .navbar-link 类可以让链接有正确的默认颜色和反色设置。
+	组件排列：通过添加 .navbar-left 和 .navbar-right 工具类让导航链接、表单、按钮或文本对齐。两个类都会通过 CSS 设置特定方向的浮动样式。
+
+	固定在顶部：.nav-fixed-top
+	固定在底部：.nav-fixed-bottom
+	反色的导航条:通过添加 .navbar-inverse 类可以改变导航条的外观。
+	路径导航:在一个带有层次的导航结构中标明当前页面的位置。加breadcrub
+
+大部分form，菜单等都放在一个容器里.container或container-fluid
+
+	r若你希望在不同屏幕上，比如窄的屏幕缩放让它变成响应式布局，建议用container-fluid
+	navbar-header的效果是在缩放小屏幕状态下把菜单放入一个三杠的里面
+
+	分页：.pagination
+
+
+标签：加上.label   .label有很多属性
+	可用的变体：就是加颜色
+
+如果标签数量很多怎么办？
+如果你有大量的设置为 inline 属性的标签全部放在一个较窄的容器元素内，在页面上展示这些标签就会出现问题，每个标签就会有自己的一个 inline-block 元素（就像图标一样）。解决的办法是为每个标签都设置为 display: inline-block; 属性。
+
+文本颜色：text-*
+
+巨幕：jumbotron
+
+页头:.page-header	可做文章的标题  应该是只有下面有框的，上面不知道也出来了怎么去掉
+
+
+缩略图：通过缩略图组件扩展 Bootstrap 的 栅格系统，可以很容易地展示栅格样式的图像、视频、文本等内容。
+
+警告框：警告框组件通过提供一些灵活的预定义消息，为常见的用户动作提供消息
+
+	将任意文本和一个可选的关闭按钮组合在一起就能组成一个警告框，.alert 类是必须要设置的，另外我们还提供了有特殊意义的4个类（例如，.alert-success），代表不同的警告信息。
+
+	没有默认类 警告框没有默认类，只有基类和修饰类。默认的灰色警告框并没有多少意义。所以您要使用一种有意义的警告类。目前提供了成功、消息、警告或危险。
+
+
+缩略图：Boostrap 缩略图的默认设计仅需最少的标签就能展示带链接的图片。
+
+可关闭的警告框:为警告框添加一个可选的 .alert-dismissible 类和一个关闭按钮。
+	依赖警告框 JavaScript 插件
+	如果需要为警告框组件提供关闭功能，请使用 jQuery 警告框插件。
+
+	警告框中的链接:用 .alert-link 工具类，可以为链接设置与当前警告框相符的颜色。
+
+
+
+进度条:通过这些简单、灵活的进度条，为当前工作流程或动作提供实时反馈。
+	跨浏览器兼容性
+进度条组件使用了 CSS3 的 transition 和 animation 属性来完成一些特效。这些特性在 Internet Explorer 9 或以下版本中、Firefox 的老版本中没有被支持。Opera 12 不支持 animation 属性。
+
+	.progress-bar 用style写进度
+	在展示很低的百分比时，如果需要让文本提示能够清晰可见，可以为进度条设置 min-width 属性。
+	根据情境变化效果:就是不同进度颜色不同还是再加上success之类的
+
+	条纹效果：.progress-bar-striped 通过渐变可以为进度条创建条纹效果，IE9 及更低版本不支持。
+	动画效果:为 .progress-bar-striped 添加 .active 类，使其呈现出由右向左运动的动画效果。IE9 及更低版本的浏览器不支持。
+
+	堆叠效果:把多个进度条放入同一个 .progress 中，使它们呈现堆叠的效果。
+
+
+Well:把 Well 用在元素上，能有嵌入（inset）的的简单效果。
+	(仿佛是在页面上抠出了一层，为实现它可以让它的内部颜色变暗，边框更暗，更是让他有阴影)
+	有lg sm两个尺寸 还有默认的 其他没了
+
+媒体对象：图片可左可右，可嵌套
+这是一个抽象的样式，用以构建不同类型的组件，这些组件都具有在文本内容的左或右侧对齐的图片（就像博客评论或 Twitter 消息等）。
+	默认样式的媒体对象组件允许在一个内容块的左边或右边展示一个多媒体内容（图像、视频、音频）。
+
+	图片和其他媒体可以top middle bottom 对齐 默认是top
+	.media .media-left .media-body .media-heading
+	.media-middle
+	要是把媒体设在右面，要先写body 再写media-right
+	要是两边都有，就要用.pull-left .pull-right
+	.pull-left 和 .pull-right 这两个类以前也曾经被用在了媒体组件上，但是，从 v3.3.0 版本开始，他们就不再被建议使用了。.media-left 和 .media-right 替代了他们，不同之处是，在 html 结构中， .media-right 应当放在 .media-body 的后面。
+	也可以在一边放多个图片
+
+list-group  btn-group form-group input-group
+
+列表组:列表组是灵活又强大的组件，不仅能用于显示一组简单的元素，还能用于复杂的定制的内容。最简单的列表组仅仅是一个带有多个列表条目的无序列表，另外还需要设置适当的类。我们提供了一些预定义的样式，你可以根据自身的需求通过 CSS 自己定制。
+
+
+面板：虽然不总是必须，但是某些时候你可能需要将某些 DOM 内容放到一个盒子里。对于这种情况，可以试试面板组件。
+
+	默认的 .panel 组件所做的只是设置基本的边框（border）和内补（padding）来包含内容。
+	颜色panel-success等 给整个加颜色，主要是变的是header
+
+	带标题的面版
+	通过 .panel-heading 可以很简单地为面板加入一个标题容器。你也可以通过添加设置了 .panel-title 类的 <h1>-<h6> 标签，添加一个预定义样式的标题。
+
+	带脚注的面版
+	把按钮或次要的文本放入 .panel-footer 容器内。注意面版的脚注不会从情境效果中继承颜色，因为他们并不是主要内容。
+
+	带表格的面版
+	为面板中不需要边框的表格添加 .table 类，是整个面板看上去更像是一个整体设计。如果是带有 .panel-body 的面板，我们为表格的上方添加一个边框，看上去有分隔效果。
+
+
+具有响应式特性的嵌入内容
+
+	根据被嵌入内容的外部容器的宽度，自动创建一个固定的比例，从而让浏览器自动确定视频或 slideshow 的尺寸，能够在各种设备上缩放。
+
+	这些规则被直接应用在 <iframe>、<embed>、<video> 和 <object> 元素上。如果你希望让最终样式与其他属性相匹配，还可以明确地使用一个派生出来的 .embed-responsive-item 类。
+
+	超级提示： 不需要为 <iframe> 元素设置 frameborder="0" 属性，因为我们已经替你这样做了！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

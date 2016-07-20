@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>现代浏览器博物馆</title>
+
+    <!-- 1 加载Bootstrap层叠样式表 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <style>
+      /*左侧菜单*/
+.sidebar-menu{
+  border-right: 1px solid #c4c8cb;
+}
+/*一级菜单*/
+.menu-first{
+  height:45px;
+  line-height:45px;
+  background-color: #e9e9e9;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+/*一级菜单鼠标划过状态*/
+.menu-first:hover{
+  text-decoration: none;
+  background-color: #d6d4d5;
+  border-top: 1px solid #b7b7b7;
+  border-bottom: 1px solid #acacac;
+}
+/*二级菜单*/
+.menu-second li a{
+  background-color: #f6f6f6;
+  height:31px;
+  line-height:31px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  font-size: 12px;
+  text-align:center;
+}
+/*二级菜单鼠标划过样式*/
+.menu-second li a:hover {
+  text-decoration: none;
+  background-color: #66c3ec;
+  border-top: 1px solid #83ceed;
+  border-bottom: 1px solid #83ceed;
+  border-right: 3px solid #f8881c;
+  border-left: 3px solid #66c3ec;
+}
+/*二级菜单选中状态*/
+.menu-second-selected {
+  background-color: #66c3ec;
+  height:31px;
+  line-height:31px;
+  border-top: 1px solid #83ceed;
+  border-bottom: 1px solid #83ceed;
+  border-right: 3px solid #f8881c;
+  border-left: 3px solid #66c3ec;
+  text-align:center;
+}
+/*覆盖bootstrap的样式*/
+.nav-list,.nav-list li a{
+  padding: 0px;
+  margin: 0px;
+}
+	  
+      </style>
+    
+    
+  </head>
+  <body>
+  <ul class="guildList nav nav-tabs nav-stacked sidebar-menu" role="tablist" id="myTab">
+  	<a href="#home" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-user-md icon-large"></i> 工会首页</a>
+    <ul id="home">
+    	<li><a href="#"><i class="icon-user"></i> 工会资料编辑</a></li>
+        
+        <li class="firCardHd">
+         <a id="anchorsList"  href="#actorInfo" role="tab" data-toggle="tab" data-target="#actorInfo" aria-expanded="true"><span class="glyphicon glyphicon-triangle-right"></span> 艺人管理</a>
+         <div class="secMenu">
+           <p>
+              <a href="javascript:;">签约艺人</a>
+           </p>
+           <p>
+              <a href="javascript:;">艺人资料管理</a>
+           </p>
+           <p>
+              <a href="javascript:;">艺人档案</a>
+           </p>
+           <p>
+              <a href="javascript:;">艺人收入管理</a>
+           </p>
+         </div>
+        </li>
+        
+        <li class="firCardHd"> 
+         <a href="#proMana" role="tab" data-toggle="tab" data-target="#proMana" aria-expanded="true" id="incomMana"><span class="glyphicon glyphicon-triangle-right"></span>收入管理</a>
+         <p class="secMenu">
+            <a href="javascript:;">工会资料编辑</a>
+         </p>
+        </li>
+        </ul>
+    </ul>
+  
+  
+  
+  	<div class="sidebar-menu">
+      <a href="#userMeun" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-user-md icon-large"></i> 用户管理</a>
+      <ul id="userMeun" class="nav nav-list collapse menu-second">
+        <li><a href="#"><i class="icon-user"></i> 增加用户</a></li>
+        <li><a href="#"><i class="icon-edit"></i> 修改用户</a></li>
+        <li><a href="#"><i class="icon-trash"></i> 删除用户</a></li>
+        <li><a href="#"><i class="icon-list"></i> 用户列表</a></li>
+    
+      </ul>
+      <a href="#articleMenu" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-book icon-large"></i> 文章管理</a>
+      <ul id="articleMenu" class="nav nav-list collapse menu-second">
+        <li><a href="#"><i class="icon-pencil"></i> 添加文章</a></li>
+        <li><a href="#"><i class="icon-list-alt"></i> 文章列表</a></li>
+      </ul>
+</div>
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    <!-- 2 jQuery库 同时加载该库必须在加载bootstrap.min.js之前 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 3 加载bootstrap的核心ＪＳ库 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+   
+    
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+function fun(){
+	var val = document.getElementById("val").value.split(",");
+	var boxes = document.getElementsByName("test");
+	for(i=0;i<boxes.length;i++){
+		for(j=0;j<val.length;j++){
+			if(boxes[i].value == val[j]){
+				boxes[i].checked = true;
+				break
+			}
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<input name="test" type="checkbox" value="1" />item-1
+<input name="test" type="checkbox" value="2" />item-2
+<input name="test" type="checkbox" value="3" />item-3<br>
+<input name="test" type="checkbox" value="4" />item-4
+<input name="test" type="checkbox" value="5" />item-5<br>
+<input type="text" id="val"><input type="button" value="确定" onclick="fun()">
+</body>
+</html>

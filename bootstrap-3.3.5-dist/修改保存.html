@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>蝌蚪直播-公会管理</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jPages.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/jPages.js"></script>
+	<script src="js/ie-emulation-modes-warning.js"></script>
+  
+    </head>
+
+  <body>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">蝌蚪直播</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+     <div class="container-fluid">
+       <div class="row" id="mainPart">
+      	<div class="col-sm-3 col-md-2 sidebar leftMenu">
+          	<div class="guildList nav nav-tabs nav-sidebar nav-stacked" role="tablist" id="myTab">
+            	<div data-taggle="tab" data-target="#unionEdit" class="home firCardHd">
+                	<a id="sociatyHome"  class="nav-header menu-first collapse" data-toggle="collapse" href="#guildLi"><span class="glyphicon glyphicon-triangle-right"></span>工会首页</a>
+                </div>
+                    
+                 <ul id="guildLi" class="nav nav-list collapse secMenu">
+                    <li>
+                        <a class="secItem" href="#guildInfo" data-toggle="tab">工会资料编辑</a>
+                    </li>
+                 </ul>
+                  </li>
+                <div data-toggle="tab" data-target="#actorInfo" class="firCardHd">
+                 	<a id="anchorsList"  href="#actorInfo" role="tab" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-right"></span> 艺人管理</a>
+                 <div class="secMenu">
+                   <ul id="artLi" class="nav nav-list collapse secMenu">
+                   	  <li>
+                      	<a href="javascript:;">签约艺人</a>
+                      </li>
+                      
+                   </p>
+                   <!--<p>
+                      <a href="javascript:;">艺人资料管理</a>
+                   </p>
+                   <p>
+                      <a href="javascript:;">艺人档案</a>
+                   </p>
+                   <p>
+                      <a href="javascript:;">艺人收入管理</a>
+                   </p>-->
+                 </div>
+                </li>
+                
+                <li class="firCardHd"> 
+                 <a href="#proMana" role="tab" data-toggle="tab" data-target="#proMana" aria-expanded="true" id="incomMana"><span class="glyphicon glyphicon-triangle-right"></span>收入管理</a>
+                 <p class="secMenu">
+                    <a href="javascript:;">工会资料编辑</a>
+                 </p>
+                </li>
+            </div>
+
+        </div><!-- /.blog-sidebar -->
+      	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main rightMenu" id="myTabContent">
+        
+          <!--默认页面-->
+          <div class="tab-pane cur initial" id="initial">
+            <h5>签约艺人概况</h5>
+            <table class="table table-bordered table-hover"> 
+              <tbody>
+                <tr>
+                  <td>签约艺人：<span class="yNum"></span>人</td>
+                  <td>当前待审核艺人：<span class="nNum"></span>人</td>
+                </tr>
+                <tr>
+                  <td>本月新增艺人：<span class="addNum"></span>人</td>
+                  <td>待转会艺人：<span class="notNum"></span>人</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <!--一级卡体-->
+          <div class="firCardBd">
+          	<!--工会首页一级卡体-->
+            <div class="unionEdit tab-pane fade in firstMenu" id="unionEdit">
+            	<div class="guild clearFix">
+              		<img class="fl" src="img/guildPic.png" width="72" height="72"/>
+                	<div class="fl guTxt">
+                    	<p>工会名称：<span class="guName"></span></p>
+                        <p>会长：<span class="leader"></span></p>
+                    </div>
+            	</div>
+            	<div class="content">
+            	
+                  <div class="contrAct">
+                    <h5>签约艺人</h5>
+                    <div class="actor">
+                      <span>旗下艺人：<i class="actNum"></i>人</span>
+                      <span>本月开播：<i class="showNum"></i>人</span>
+                      <span>本月新增：<i class="addNum"></i>人</span>
+                    </div>
+                  </div>
+                  
+                  <div class="profit">
+                    <h5>工会收益</h5>
+                    <div class="proInfo">
+                        <span>本月应收：<i class="curNum"></i></span>
+                        <span>本月应收：<i class="lastNum"></i></span>
+                    </div>
+                  </div>
+            	</div>
+        	</div>
+        
+            <!--艺人管理一级卡体-->
+            <div class="actorInfo tab-pane fade firstMenu" id="actorInfo">
+            	<h5>艺人管理</h5>
+	            <ul class="nav nav-tabs row" role="tablist" id="tab-list">
+		                <li class="active col-sm-1 sigTit">
+		                    <a id="alreadySign" class="text-center" href="#tab-signed" role="tab" data-toggle="tab">已签约</a>
+		                </li>
+		                <li class="col-sm-1 sigTit">
+		                    <a  id="pendingAudit" class="text-center" href="#tab-notSig" role="tab" data-toggle="tab">待审核</a>
+		                </li>
+                        
+                        <li class="col-sm-2 col-sm-offset-2" id="popTb">
+                        	<!--<a role="tab" data-toggle="tab">+签约艺人</a>-->
+                            <!--<a href="#" data-toggle="modal" data-target="#about">关于</a>-->
+                            <button data-toggle="modal" data-target="#artBig" type="button" class="btn btn-info">弹出大表单</button>
+                        </li>
+                        
+                        <li class="pop col-sm-2 cos-sm-offset-6">
+                        	<!--<a role="tab" data-toggle="tab">+签约艺人</a>-->
+                            <!--<a href="#" data-toggle="modal" data-target="#about">关于</a>-->
+                            <button data-toggle="modal" data-target="#about" type="button" class="btn btn-info">+签约艺人</button>
+                        </li>
+	            	</ul>
+                    
+                    <div class="modal fade" id="about">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    
+                                    <div class="modal-title">
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="Search for...">
+                                          <span class="input-group-btn">
+                                            <button id="searchUser" class="btn btn-default" type="button">搜索</button>
+                                          </span>
+                                        </div><!-- /input-group -->
+                                      </div><!-- /.col-lg-6 -->
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    <p></p>
+                                    <input type="hidden" id="userId"/>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button type="button"   id="okok"  class="btn btn-default" data-toggle="modal" data-target="#notFound">确定</button>                         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal fade" id="notFound" role="dialog">
+                    	<div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title text-left">提示:</h4>
+                                </div>
+                                <div class="modal-body text-center">
+                                    未搜索到该用户
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal fade" id="artBig">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h4 class="modal-title">申请入驻</h4>
+                                </div>
+                
+                                <div class="modal-body">
+                                    <form class="form-horizontal" action="/rest/sociaty/addAnchor.mt"  method="post"  id="anchorsForm"  enctype="multipart/form-data" >
+                                      <div class="form-group">
+                                        <label for="tbName" class="col-sm-2 control-label">姓名</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="tbName" name= "truename" placeholder="请填写您的姓名">
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                      	  <label for="tbName" class="col-sm-2 control-label">性别</label>
+                                          <div class="col-sm-10">
+                                              <label>
+                                                <input type="radio" name="gender" id="boy" value="1" checked>
+                                                男
+                                              </label>
+                                              <label>
+                                            <input type="radio" name="gender"  id="girl" value="0">
+                                            女
+                                          </label>
+                                          </div>
+                                        </div>
+                                      <div class="form-group">
+                                            <label for="telNum" class="col-sm-2 control-label">手机号</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="telNum"  name="phone"  placeholder="请填写您手机号">
+                                            </div>
+                                        </div>
+                                      <div class="form-group">
+                                            <label for="qqNum" class="col-sm-2 control-label">QQ</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="qqNum"  name="qq" placeholder="请填写您手机号">
+                                            </div>
+                                        </div>
+                                      <div class="form-group">
+                                            <label for="vidioSite" class="col-sm-2 control-label">个人视频</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="vidioSite"  name="videoLink" placeholder="个人视频">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="banks" class="col-sm-2 control-label">开户银行</label>
+                                            <div class="col-sm-10">
+                                              <select class="form-control" id="banks" name="banktype">
+                                                 <option value="0">中国工商银行</option>
+                                                 <option value="1">中国农业银行</option>
+                                                 <option value="2">中国银行</option>
+                                                 <option value="3">中国建设银行</option>
+                                                 <option value="4">中国光大银行</option>
+                                                 <option value="5">中国民生银行</option>
+                                                 <option value="6">华夏银行</option>
+                                                 <option value="7">中信银行</option>
+                                                 <option value="8">恒丰银行</option>
+                                                 <option value="9">上海浦东发展银行</option>
+                                                 <option value="10">交通银行</option>
+                                                 <option value="11">浙商银行</option>
+                                                 <option value="12">兴业银行</option>
+                                                 <option value="13">深圳发展银行</option>
+                                                 <option value="14">招商银行</option>
+                                                 <option value="15">广东发展银行</option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="branch" class="col-sm-2 control-label">开户行地址</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control"  name="bankOwner"  id="branch" placeholder="请填写开户行地址">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="cdNum" class="col-sm-2 control-label">银行卡卡号</label>
+                                            <div class="col-sm-10">
+                                              <input type="text"  name="banknumber" class="form-control" id="cdNum" placeholder="请填写银行卡号">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="idCard" class="col-sm-2 control-label">身份证号码</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="idCard"  name="idcard"  placeholder="请填写身份证号码">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group form-inline positive">
+                                            <label for="positive" class="col-sm-2 control-label">身份证正面</label>
+                                            <input type="file"  name="idcardPosImage" class="col-sm-5" id="positive">                                            
+                                        </div>
+                                        
+                                        <div class="form-group form-inline opposite">
+                                        	<label for="opposite" class="col-sm-2 control-label">身份证反面</label>
+                                            <input type="file"  name="idcardOthImage" class="col-sm-5" id="opposite">
+                                        </div>
+                                        <input type ="hidden" id="saveUserId"  name = "userId">
+                                        <div class="form-group form-inline cover">
+                                            <label for="cover"  class="col-sm-2 control-label">封面</label>
+                                            <input type="file"   name="bigCover"  class="col-sm-5" id="cover"/>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"  data-target=".warning" id="anApply">申请</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal fade warning" role="dialog">
+                                    	<div class="modal-dialog modal-sm">
+                                        	<div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        <span class="sr-only">Close</span>
+                                                    </button>
+                                                    <h4 class="modal-title text-left">温馨提示：</h4>
+                                                </div>
+                                
+                                                <div class="modal-body text-center alert alert-danger">
+                                                    请您填写完整
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                    
+    
+                    <div class="tab-content">   
+                    <table class="tab-pane table table-bordered table-hover active" id="tab-signed">
+                    	<tr class="row"> 
+                            <td class="col-md-2 email">123@qq.com</td> 
+                            <td class="col-md-1">名字</td>
+                            <td class="col-md-1">名字</td> 
+                            <td class="col-md-1">男</td>
+                            <td class="col-md-2">2016年7月11日</td> 
+                            <td class="col-md-1">10265</td>
+                            <td class="col-md-2">0天前</td> 
+                            <td class="col-md-2 " id="aa"><a href="" >详细记录</a></td>
+                        </tr>
+                    </table>
+                    <table class="tab-pane table table-bordered table-hover" id="tab-notSig">
+                    </table>
+                    </div>
+
+            </div>
+            
+            <!-- 工会收益管理一级卡体 -->
+          	<div class="proMana tab-pane fade" id="proMana">
+                <div class="income">
+                  本月工会应收款：<span class="incmNum">79318792</span>
+                </div>
+                <div class="incmDetail">
+                  <p>收益明细</p>
+                  <div class="incmInfo">
+                    <div class="row">
+                      <div class="col-md-1">频道号</div>
+                      <div class="col-md-2">艺人姓名</div>
+                      <div class="col-md-1">昵称</div>
+                      <div class="col-md-2">直播总时长</div>
+                      <div class="col-md-2">主播总收益(蝌币)</div>
+                      <div class="col-md-2">工会收益(蝌币)</div>
+                      <div class="col-md-2">主播提成(蝌币)</div>
+                    </div>
+        
+                    <!--<div class="row">
+                      <div class="col-md-1">6005</div>
+                      <div class="col-md-2">某某某某</div>
+                      <div class="col-md-1">某某某</div>
+                      <div class="col-md-2">94小时</div>
+                      <div class="col-md-2">7989890</div>
+                      <div class="col-md-2">464646</div>
+                      <div class="col-md-2">7989890</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">6005</div>
+                      <div class="col-md-2">某某某某</div>
+                      <div class="col-md-1">某某某</div>
+                      <div class="col-md-2">94小时</div>
+                      <div class="col-md-2">7989890</div>
+                      <div class="col-md-2">464646</div>
+                      <div class="col-md-2">7989890</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">6005</div>
+                      <div class="col-md-2">某某某某</div>
+                      <div class="col-md-1">某某某</div>
+                      <div class="col-md-2">94小时</div>
+                      <div class="col-md-2">7989890</div>
+                      <div class="col-md-2">464646</div>
+                      <div class="col-md-2">7989890</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">6005</div>
+                      <div class="col-md-2">某某某某</div>
+                      <div class="col-md-1">某某某</div>
+                      <div class="col-md-2">94小时</div>
+                      <div class="col-md-2">7989890</div>
+                      <div class="col-md-2">464646</div>
+                      <div class="col-md-2">7989890</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-1">6005</div>
+                      <div class="col-md-2">某某某某</div>
+                      <div class="col-md-1">某某某</div>
+                      <div class="col-md-2">94小时</div>
+                      <div class="col-md-2">7989890</div>
+                      <div class="col-md-2">464646</div>
+                      <div class="col-md-2">7989890</div>
+                    </div>-->
+                  </div>
+        
+                </div>
+              </div>
+          
+          </div>
+        <div class="seCardBd">
+          <!--工会资料编辑二级卡体-->
+          <div class="guildInfo tab-pane fade" id="guildInfo">
+            <h5>工会资料</h5>
+            <div class="modName">
+            	<span>工会名称：<input type="text" value="这是个工会具体名字"/></span>
+                <input class="modIpt" type="button" value="修改名字"/>
+                <span class="tip">（每3个月只能修改一次工会名称）</span>
+            </div>
+            
+            <div class="modLogo">
+            	<p>工会LOGO</p>
+                <div class="clearFix">
+                	<img class="fl" src="img/guildPic.png"/>
+                    <div class="modTip">
+                    	<p class="size">工会图标尺寸：？？？*？？？</p>
+                    	<p>jpg或者png格式，图片大小不得超过4M</p>
+                        <input class="subImg" type="submit" value="上传图片"/>
+                    </div>
+                </div>
+                <div>
+                	<input class="modBtn" type="button" value="修改"/>
+                </div>
+            </div>
+
+          </div>
+     
+          <!--工会管理二级卡体-->
+          <div class="unionMana tab-pane" id="unionMana">
+            <h5>工会管理</h5>
+            <div class="sigDetail">
+                <div class="unionInfo">
+                	<div class="row">
+                      <div class="col-md-3">账户</div>
+                      <div class="col-md-3">昵称</div>
+                      <div class="col-md-3">管理权限</div>
+                      <div class="col-md-3">最近登录时间</div>
+                    </div>	
+                    <div class="row">
+                      <div class="col-md-3">la@xxxxx.com</div>
+                      <div class="col-md-3">hahahaha</div>
+                      <div class="col-md-3">艺人管理</div>
+                      <div class="col-md-3">2016-6-29 19:53:46</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">la@xxxxx.com</div>
+                      <div class="col-md-3">hahahaha</div>
+                      <div class="col-md-3">艺人管理</div>
+                      <div class="col-md-3">2016-6-29 19:53:46</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">la@xxxxx.com</div>
+                      <div class="col-md-3">hahahaha</div>
+                      <div class="col-md-3">艺人管理</div>
+                      <div class="col-md-3">2016-6-29 19:53:46</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">la@xxxxx.com</div>
+                      <div class="col-md-3">hahahaha</div>
+                      <div class="col-md-3">艺人管理</div>
+                      <div class="col-md-3">2016-6-29 19:53:46</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+          <!--签约艺人二级卡体-->
+          <div class="signActor tab-pane fade" id="signActor">
+            <h5>签约艺人概况</h5>
+            <div class="sigDetail defaults" id="content">
+            	<div class="sigTit clearFix">
+                	<span class="fl"></span>
+                    <span class="back fr">返回</span>
+                </div>
+               
+               	<div class="holder"></div>
+                <ul class="sigInfo" id="sigInfo">
+                 	<li class="row">
+                      <div class="col-md-4">开播时间</div>
+                      <div class="col-md-4">开播时长</div>
+                      <div class="col-md-4">收益</div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-4">2016-6-29 20:01:20</div>
+                        <div class="col-md-4">2时12分钟</div>
+                        <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                        <div class="col-md-4">2016-6-29 20:01:20</div>
+                        <div class="col-md-4">2时12分钟</div>
+                        <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>	
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li> 
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>	
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li> 
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>	
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li> 
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>	
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li> 
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>	
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li> 
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>	
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li>
+                    <li class="row">
+                      <div class="col-md-4">2016-6-29 20:01:20</div>
+                      <div class="col-md-4">2时12分钟</div>
+                      <div class="col-md-4">140000蝌币</div>
+                    </li> 
+                </ul>
+            </div>
+        </div> 
+        
+        </div>
+
+          
+
+
+         
+            
+      </div><!-- /.blog-main -->
+		
+        
+       </div><!-- /.row -->
+	   </div><!-- /.container -->
+	    
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/jqueryform.js"></script>
+    <script src="js/guild.js"></script>
+
+  </body>
+</html>
